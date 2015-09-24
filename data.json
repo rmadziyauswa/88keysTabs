@@ -1,0 +1,89 @@
+	[
+	{
+		"id" : "1",
+		"name": "Jesus Be The Center",
+		"key": "G",
+		"numeric_progression": [
+			[1,4,1,5],
+			[1,5,4]
+		]
+	},
+	{
+		"id" : "2",
+		"name": "Awesome God",
+		"key": "C#",
+		"numeric_progression": [
+			[1,4,1,5],
+			[1,5,4]
+		]
+	},
+	{
+		"id" : "3",
+		"name": "Imela",
+		"key": "Ab",
+		"numeric_progression": [
+			[1,4,1,5],
+			[1,5,4]
+		]
+	},
+	{
+		"id" : "4",
+		"name": "Hakuna Rimwe Zita Sera Jesu",
+		"key": "Eb",
+		"numeric_progression": [
+			[1,5,4]
+		]
+	},
+	{
+		"id" : "5",
+		"name": "Panoitike Basa",
+		"key": "E",
+		"numeric_progression": [
+			[1,4,1,5],
+			[1,5,4],
+			[3,2,1,6],
+			[1,2,3,4],
+			[2,6,7,2]
+		]
+	},
+	{
+		"id" : "6",
+		"name": "Because He Lives",
+		"key": "Db",
+		"numeric_progression": [
+			[1,4,1,5]
+		]
+	},
+	{
+		"id" : "7",
+		"name": "When He Calls Me",
+		"key": "F",
+		"numeric_progression": [
+			[1,4,6,5]
+		]
+	},
+	{
+		"id" : "8",
+		"name": "Ndibatsireiwo Kutenda",
+		"key": "E",
+		"numeric_progression": [
+			[1,4,1,5]
+		]
+	},
+	{
+		"id" : "9",
+		"name": "Lilly Of The Valley",
+		"key": "Ab",
+		"numeric_progression": [
+			[1,6,4,5]
+		]
+	},
+	{
+		"id" : "10",
+		"name": "I Look To You",
+		"key": "Ab",
+		"numeric_progression": [
+			[6,1,4,5]
+		]
+	}
+	]

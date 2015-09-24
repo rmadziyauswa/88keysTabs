@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html ng-app="88keys">
+<html ng-app="keyTabs">
     <head>
         <meta http-equiv=Content-Type content="text/html; charset=utf-8">
         <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -8,10 +8,34 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <h1>{{"tata Ma millions"}}</h1>
+        
+        <div class="container-fluid" id="main-container">
+
+            <header id="main-header">
+                <div class="row">
+                    <div class="col-xs-3"><span class="glyphicon glyphicon-music"></span></div>
+                    <div class="col-xs-6">
+                        <a href="#home">
+                            <h1 class="site-text">88 Key Tabs</h1>
+                        </a>
+                    </div>
+                    <div class="col-xs-3"><span class="glyphicon glyphicon-music"></span></div>
+                </div>
+            </header>
+
+            <div class="app-body">
+                
+              <div ng-view></div>
 
 
-        <script type="text/javascript" src="js/angular.min.js"></script>
+            </div>
+
+        </div>
+
+
+        <!-- <script type="text/javascript" src="js/angular.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
          <script type="text/javascript" src="js/app.js"></script>
 
    </body>

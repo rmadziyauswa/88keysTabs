@@ -1,0 +1,40 @@
+<div class="song-view">
+	<h2>{{ song.name }}</h2>
+	<div class="best-key">
+		<label>Most Probable Key</label>
+		<span class="badge">{{ song.key }}</span>
+	</div>
+
+	<div class="numeric-chord-progression">
+		<h3>Numeric Chord Progression</h3>
+		<div ng-repeat="p in song.numeric_progression">
+			<ul>
+				<li ng-repeat="v in p track by $index">{{v}}</li>
+			</ul>
+		</div>
+	
+	</div>
+
+
+	<div class="actual-chord-progression">
+		<h3>Chord Progression</h3>
+		<ul>
+			<li>C</li>
+			<li>Am</li>
+			<li>F</li>
+			<li>G</li>
+		</ul>
+
+		<ul>
+			<li>C</li>
+			<li>F</li>
+			<li>G</li>
+		</ul>
+	</div>
+
+	<div class="action-buttons">
+		<button class="btn btn-primary">Edit</button>
+		<button class="btn btn-danger">Delete</button>
+	</div>
+
+</div>

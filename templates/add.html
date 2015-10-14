@@ -1,0 +1,67 @@
+<div>
+	<h3>{{ isEdit ? 'Edit ' + song.name :'Add New Song' }}</h3>
+	<form class="form-horizontal" ng-submit="isEdit ? editSong(song) : addSong(song)" name="frmAdd" novalidate>
+		<div class="form-group">
+			<label class="control-label col-xs-2" for="txtSongName">Song Name</label>
+			<div class="col-xs-10">
+				<input class="form-control" type="text" ng-model="song.name" name="txtSongName" required></input>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-xs-2" for="txtKey">Song Key</label>
+			<div class="col-xs-10">
+				<select class="form-control" ng-model="song.key" name="cboKey">
+					<option value="{{ note }}" ng-repeat="note in notes track by $index">{{ note }}</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group">			
+			<div class="col-xs-10">
+				<input class="form-control" type="text" name="txtNumericProgression" placeholder="Enter Numeric Progression here! E.g 1,6,4,5" ng-model="current_progression"></input>
+			</div>
+			<div class="col-xs-2">
+				<a ng-click="addProgression(current_progression)" class="btn btn-success" ng-disabled="frmAdd.txtNumericProgression.$pristine || current_progression.length < 1">Add To Progressions</a>
+			</div>
+		</div>
+
+		<div class="form-group numeric-chord-progression">
+			<h3>Numeric Chord Progressions</h3>
+			<div ng-repeat="p in song.numeric_progression" ng-mouseenter="showtrash=true" ng-mouseleave="showtrash=false" ng-show="!deleted">
+				
+				<span class="glyphicon glyphicon-trash" ng-show="showtrash" ng-click="deleteProgression(song,p); deleted=true;"></span>
+				<ul>
+					<li ng-repeat="v in p track by $index">{{v}}</li>
+				</ul>
+
+			</div>
+		
+		</div>
+
+
+		<div class="actual-chord-progression">
+			<h3>Chord Progression</h3>
+
+			<div ng-repeat="c in progressions">
+				<ul>
+					<li ng-repeat="y in c track by $index">{{y}}</li>
+				</ul>
+			</div>
+
+			
+		</div>
+
+		<div class="form-group">
+			<div class="col-xs-10">
+				<input class="btn btn-primary" type="submit" name="btnSubmit" value="{{ isEdit ? 'Save Changes' :'Add Song' }}"
+				ng-disabled="( frmAdd.txtSongName.$dirty && frmAdd.txtSongName.$invalid || frmAdd.txtSongName.$pristine ) && (!isEdit)"
+				 />
+			</div>
+		</div>
+
+
+	</form>
+	
+
+</div>

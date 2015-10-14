@@ -1,4 +1,7 @@
 <div class="song-view">
+
+	<div id="view-div" ng-show="!delete"> <!-- For viewing the song -->
+
 	<h2>{{ song.name }}</h2>
 	<div class="best-key">
 		<label>Most Probable Key</label>
@@ -6,7 +9,7 @@
 	</div>
 
 	<div class="numeric-chord-progression">
-		<h3>Numeric Chord Progression</h3>
+		<h3>Numeric Chord Progressions</h3>
 		<div ng-repeat="p in song.numeric_progression">
 			<ul>
 				<li ng-repeat="v in p track by $index">{{v}}</li>
@@ -18,23 +21,32 @@
 
 	<div class="actual-chord-progression">
 		<h3>Chord Progression</h3>
-		<ul>
-			<li>C</li>
-			<li>Am</li>
-			<li>F</li>
-			<li>G</li>
-		</ul>
 
-		<ul>
-			<li>C</li>
-			<li>F</li>
-			<li>G</li>
-		</ul>
+		<div ng-repeat="c in progressions">
+			<ul>
+				<li ng-repeat="y in c track by $index">{{y}}</li>
+			</ul>
+		</div>
+
+		
 	</div>
 
 	<div class="action-buttons">
-		<button class="btn btn-primary">Edit</button>
-		<button class="btn btn-danger">Delete</button>
+		<a href="#/edit/{{ song.id }}" class="btn btn-primary">Edit</a>
+		<button class="btn btn-danger" ng-click="delete=true">Delete</button>
 	</div>
+
+</div>
+
+<div id="delete-div" ng-show="delete">
+
+	<h4>Delete <span id="delete-song-name">{{song.name}}</span> ???</h4>
+
+	<div class="action-buttons">
+		<button class="btn btn-primary" ng-click="delete=false">Cancel</button>
+		<button class="btn btn-danger" ng-click="deleteSong(song)">Delete</button>
+	</div>
+
+</div>
 
 </div>

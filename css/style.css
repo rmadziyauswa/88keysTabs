@@ -13,4 +13,170 @@ html {
 body {
 	margin: 0;
 	font-family:'Goot Times', sans-serif;
+	background-color: #000000;
+}
+
+header#main-header{
+    color: #226DF1;
+}
+
+#main-header div{
+	text-align: center;
+}
+header#main-header .glyphicon {
+    font-size: 36px;
+    color: #226DF1;
+}
+
+
+header#main-header a{
+    color: #226DF1;
+	text-decoration: none;
+	transition: all .4s ease-out;
+	-webkit-transition: all .4s ease-out;
+	-o-transition: all .4s ease-out;
+	-moz-transition: all .4s ease-out;
+}
+
+header#main-header a:hover h1, header#main-header a:hover .glyphicon{
+	color: #226d99;
+	font-size: 34px;
+}
+
+a:hover, a:active , a:visited{
+    color: #226DF1;
+	text-decoration: none;
+}
+
+
+h1.site-text {
+    margin: 0;
+    text-align: center;
+}
+
+.ng-scope{
+    background-color: #000000;
+    border: none;
+
+}
+
+.app-body {
+    margin: 20px auto;
+}
+
+.list-group-item>.badge{
+    float: right;
+    background-color: #BF2054;
+    color: #cccccc;
+    padding: 6px;
+}
+
+
+ .best-key .badge{
+    background-color: #226df1;
+    color: #cccccc;
+    padding: 6px;
+}
+
+
+a.list-group-item, a.list-group-item, button.list-group-item, button.list-group-item {
+     transition: all .3s ease-in;
+}
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+      color: #226df1;
+    text-decoration: none;
+    background-color: #303D65;
+    font-size: 0.85em;
+}
+
+#search-tabs{
+    color: #226df1;
+}
+
+a.list-group-item, button.list-group-item {
+    color: #226df1;
+}
+
+.song-view {
+    text-align: center;
+    color: #BF2054;
+}
+
+.numeric-chord-progression ul, .actual-chord-progression ul{
+    list-style: none;
+}
+
+.numeric-chord-progression ul li, .actual-chord-progression ul li{
+    display: inline-block;
+    margin: 0 10px;
+    background-color: #9C5117;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50px;
+        color: #BFBF9F;
+}
+
+.actual-chord-progression h3{
+   color: #D6C95D;
+}
+
+
+.numeric-chord-progression h3{
+   color: #009922;
+}
+
+.action-buttons {
+    margin-top: 30px;
+}
+
+.action-buttons button {
+    margin: 0 10px;
+}
+
+
+.best-key label {
+    color: #C2D05D;
+}
+
+.h3, h3 {
+    font-size: 16px;
+}
+
+footer div{
+    text-align: center;
+    font-size: 9px;
+     color: #C2D05D;
+     margin-top: 50px;
+}
+
+footer div .glyphicon{
+    color: red;
+}
+
+#btn-add-new{
+    transition: all .3s ease-in;
+}
+
+#btn-add-new .glyphicon.glyphicon-plus{
+    color: #ffffff;
+    font-size: 22px;
+}
+
+#btn-add-new:hover .glyphicon.glyphicon-plus{
+    color: #000000;
+    font-size: 24px;
+}
+
+#btn-add-new:hover {
+    background-color: #F90A04;
+    border-color: #F90A04;
+}
+
+#delete-song-name{
+   color: #C2D05D; 
+}
+
+a.btn.btn-primary {
+    color: #ffffff;
 }

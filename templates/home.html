@@ -1,7 +1,7 @@
 <form id="search-form" method="POST">
 
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search Tabs" aria-label="Search Tabs" ng-model="searchtabs">
+    <input type="text" class="form-control" placeholder="Search Tabs" aria-label="Search Tabs" ng-model="searchtabs" id="search-tabs">
     <span class="input-group-addon">
       <a id="clear-search" ng-click="clearSearchTabs()">
         <span class="glyphicon glyphicon-remove"></span>
@@ -12,8 +12,9 @@
 
 <div class="tab-list list-group">
 
-  <a href="#/view/{{song.id}}" class="list-group-item" ng-repeat="song in songs | orderBy:'name' | filter:searchtabs">
+  <a href="#/view/{{song.id}}" class="list-group-item" ng-repeat="song in songs | orderBy:'name' | filter:searchtabs track by $index">
     {{ song.name }}
+
     <span class="badge">{{ song.key }}</span> 
   </a>
 
